@@ -1,8 +1,10 @@
 
-Default terminal used: https://github.com/Algorithm79/st
-just change to urxvt in i3 config if thats more your style both have same color schems and transparency
+FORKED FROM: https://github.com/Algorithm79/Dotfiles_i3
 
-Configuration files for i3wm with Arc-Themed i3 & terminal 2017-05-08
+Default Terminal: urxvit
+just change terminal entry in i3 config to a terminal of your liking.
+
+Configuration files for i3wm with Arc-Themed i3 & terminal
 To be placed in ~/.config:
 conky
 i3
