@@ -15,11 +15,11 @@ export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
 eval "`dircolors -b $DIR_COLORS`"
 
-export PYTHONPATH=/usr/lib/python3.6/site-packages
+export PYTHONPATH=/usr/lib/python3.7/site-packages
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+. /usr/share/powerline/bindings/bash/powerline.sh
 
 extract () {
 if [ -f $1 ] ; then
