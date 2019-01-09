@@ -20,7 +20,7 @@ font pango:Droid Sans 10, Font Awesome 5 Free 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+floating_modifier Shift
 
 # start a terminal
 bindsym $mod+Return exec urxvt 
