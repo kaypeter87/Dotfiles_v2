@@ -20,7 +20,7 @@ font pango:Droid Sans 10, Font Awesome 5 Free 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier Shift
+floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt 
@@ -165,10 +165,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym odiaeresis resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -240,7 +240,7 @@ bindsym Mod1+Shift+Print exec scrot -s $HOME/Bilder/Screenshots/`date +%Y-%m-%d_
 bar {
 	font pango:Droid Sans Mono 12, FontAwesome 12
         position top
-	status_command ~/git/bumblebee-status/bumblebee-status -m caffeine indicator weather uptime disk:root memory cpu kernel pasink datetime pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t solarized-powerline
+	status_command bumblebee-status -m caffeine indicator weather uptime disk:root memory cpu kernel pasink datetime pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t solarized-powerline
 #	tray_output secondary
 #	output HDMI-A-0
   	colors {
