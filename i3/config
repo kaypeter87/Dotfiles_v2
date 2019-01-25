@@ -240,7 +240,7 @@ bindsym Mod1+Shift+Print exec scrot -s $HOME/Bilder/Screenshots/`date +%Y-%m-%d_
 bar {
 	font pango:Droid Sans Mono 12, FontAwesome 12
         position top
-	status_command /usr/bin/bumblebee-status -m caffeine indicator weather uptime disk:root memory cpu kernel pasink datetime pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t solarized-powerline
+	status_command ~/git/bumblebee-status/bumblebee-status -m caffeine indicator weather uptime disk:root memory cpu kernel pasink datetime pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t solarized-powerline
 #	tray_output secondary
 #	output HDMI-A-0
   	colors {
