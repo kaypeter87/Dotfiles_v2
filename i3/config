@@ -272,7 +272,7 @@ bindsym $mod+Delete exec /usr/bin/rofi-computer
 bindsym $mod+shift+Delete exec betterlockscreen --lock dim 
 
 # screensetup
-exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 1920x1200 --pos 0x0 --rotate normal --output DVI-D-0 --mode 1920x1200 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
+exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DVI-D-0 --mode 3440x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
 
 # autostarted applications
 exec --no-startup-id caffeine
