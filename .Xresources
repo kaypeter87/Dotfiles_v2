@@ -41,7 +41,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          qutebrowser 
+URxvt.urlLauncher:          qutebrowser
 
 ! Cursor
 URxvt.cursorBlink:          true
@@ -51,8 +51,8 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         true
 
-*background: #002b36
-*foreground: #657b83
+*background: #161821
+*foreground: #c6c8d1
 !!*fading: 40
 *fadeColor: #002b36
 *cursorColor: #93a1a1
