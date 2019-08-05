@@ -1,4 +1,4 @@
-# i3 Config File 2018-03-01
+# i3 Config File 2019-03-15
 # Arc-Dark Themed
 
 set $mod Mod1
@@ -20,10 +20,10 @@ font pango:Droid Sans 10, Font Awesome 5 Free 10
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier Shift 
+floating_modifier Shift
 
 # start a terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -36,7 +36,7 @@ bindsym $mod+d exec " dmenu_run -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#
 # installed.
 
 # start rofi (dmenu mode)
-bindsym $mod+z exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -lines 10 -eh 1 -width 50 -padding 50 -opacity "85" -font "Droid Sans 16"'  
+bindsym $mod+z exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -lines 10 -eh 1 -width 50 -padding 50 -opacity "85" -font "Droid Sans 16"'
 
 # start rofi (window mode)
 bindsym $mod+Tab exec rofi -show window -i -lines 10 -eh 1 -width 50 -padding 50 -opacity "85" -font "Droid Sans 16"
@@ -136,7 +136,7 @@ assign [class="Pcmanfm"] $workspace3
 assign [class="Thunar"] $workspace3
 assign [class="Thunderbird"] $workspace7
 assign [class="Spotify"] $workspace10
-for_window [class="Spotify"] move to workspace $workspace10 
+for_window [class="Spotify"] move to workspace $workspace10
 assign [class="Rhythmbox"] $workspace4
 assign [class="Audacious"] $workspace4
 assign [class="Gnome-mplayer"] $workspace5
@@ -191,7 +191,7 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #5294e2
 
 # windows         Border    Background    Text     Indicator
-client.focused    #ed3838   #ed3838       #ffffff  #ed3838 
+client.focused    #ed3838   #ed3838       #ffffff  #ed3838
 client.unfocused  #2f343f   #2f343f       #ffffff  #676E7D
 
 # windows starting in floating mode
@@ -210,9 +210,9 @@ for_window [class="etcher"] floating enable border normal
 for_window [class="Galculator"] floating enable border normal
 for_window [class="Audacious"] floating enable border normal
 for_window [class="Nautilus"] floating enable
-for_window [class="Thunar"] floating enable 
+for_window [class="Thunar"] floating enable
 for_window [class="Org.gnome.Weather.Application"] floating enable
-#for_window [class="Photoshop.exe"] floating enable 
+#for_window [class="Photoshop.exe"] floating enable
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="milkytracker"] floating enable
 for_window [class="Arandr"] floating enable
@@ -240,7 +240,7 @@ bindsym Mod1+Shift+Print exec scrot -s $HOME/Bilder/Screenshots/`date +%Y-%m-%d_
 bar {
 	font pango:Droid Sans Mono 12, FontAwesome 12
         position top
-	status_command ~/git/bumblebee-status/bumblebee-status -m caffeine indicator weather uptime disk:root memory cpu kernel pasink datetime pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t solarized-powerline
+	status_command ~/git/bumblebee-status/bumblebee-status -m caffeine indicator weather uptime disk:root memory cpu kernel pasink datetime pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t iceberg-dark-powerline
 #	tray_output secondary
 #	output HDMI-A-0
   	colors {
@@ -251,7 +251,7 @@ bar {
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
-	
+
 }
 
 
@@ -269,7 +269,7 @@ gaps outer 2
 
 # shut down, restart and locking features
 bindsym $mod+Delete exec /usr/bin/rofi-computer
-bindsym $mod+shift+Delete exec betterlockscreen --lock dim 
+bindsym $mod+shift+Delete exec betterlockscreen --lock dim
 
 # screensetup
 exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DVI-D-0 --mode 3440x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
@@ -280,7 +280,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec --no-startup-id nitrogen --restore; sleep 1;
 exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
-exec --no-startup-id xset dpms 1200 
+exec --no-startup-id xset dpms 1200
 exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
 exec --no-startup-id dunst
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
