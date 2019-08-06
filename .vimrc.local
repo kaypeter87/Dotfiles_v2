@@ -7,6 +7,9 @@
 " Detect Terminal
 let term=$TERM
 
+" Set to Python2 Interpreter path
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
+
 " Set the background to dark
 set background=dark
 
