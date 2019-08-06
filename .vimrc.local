@@ -1,0 +1,47 @@
+" This .vimrc.local file is for my Vim IDE.
+" You will need to install sebdah's Vim IDE
+" to use these configuration settings.
+" Although these are valid Vim settings,
+" It would work best with my Dotfiles.
+
+" Set the background to dark
+set background=dark
+
+" vim-airline configuration
+let g:airline#extensions#tabline#enabled = 1
+
+" Enable vim-airline powerline fonts
+let g:airline_powerline_fonts = 1
+
+" Disable beeping and flashing
+set vb t_vb=
+
+" Detect Terminal for later use
+let term=$TERM
+
+" Always display the status line
+set laststatus=2
+
+" Force term colors to 256
+set t_Co=256
+
+" Show line numbers
+set nu
+
+" Enable syntax highlighting
+syntax on
+
+" Auto open NERDTree and ctags when you enter Vim
+au VimEnter * NERDTree
+au VimEnter * nested :TagbarOpen
+
+" Enable all Vim features
+set nocompatible
+
+filetype indent plugin on
+set expandtab
+set smarttab
+set autoindent
+
+" highlight character pairs ie {}
+runtime macros/matchit.vim
