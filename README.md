@@ -27,23 +27,23 @@ rc.conf ~/.config/ranger
 dunstrc ~/.config
 
 ## Packages used in configuration:
-nm-applet
-pa-applet
-nitrogen
-neofetch
-compton
-xautolock
-i3gaps
-i3status
-powerline
-lxappearance
-rofi
-dunst
-dmenu
-simple
-terminal(st and urxvt)
-scrot
-betterlockscreen
+- nm-applet
+- pa-applet
+- nitrogen
+- neofetch
+- compton
+- xautolock
+- i3gaps
+- i3status
+- powerline
+- lxappearance
+- rofi
+- dunst
+- dmenu
+- simple
+- terminal(st and urxvt)
+- scrot
+- betterlockscreen
 
 
 ## Themes and Icons etc:
