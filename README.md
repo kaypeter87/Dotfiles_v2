@@ -1,5 +1,8 @@
-
-# FORKED FROM: https://github.com/Algorithm79/Dotfiles_i3
+# ModularArchi3 Desktop Environment
+This started as a fork from https://github.com/Algorithm79/Dotfiles_i3 but later
+converted into a personal project. I really enjoyed how modular and portable
+this desktop environment was and wanted to expand on its features. This is still
+a WIP. Screencaps to come soon!
 
 ## Default Terminal: urxvt
 just change terminal entry in i3 config to a terminal of your liking.
