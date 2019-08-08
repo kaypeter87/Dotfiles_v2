@@ -27,13 +27,34 @@ rc.conf ~/.config/ranger
 dunstrc ~/.config
 
 ## Packages used in configuration:
-nm-applet pa-applet nitrogen neofetch compton xautolock i3gaps i3status powerline lxappearance rofi dunst dmenu simple terminal(st) scrot betterlockscreen
+nm-applet
+pa-applet
+nitrogen
+neofetch
+compton
+xautolock
+i3gaps
+i3status
+powerline
+lxappearance
+rofi
+dunst
+dmenu
+simple
+terminal(st and urxvt)
+scrot
+betterlockscreen
+
 
 ## Themes and Icons etc:
 Terminal https://github.com/Algorithm79/st
+
 Arc-Theme https://github.com/horst3180/arc-theme
+
 Icons https://github.com/erikdubois/Sardi
+
 Status Bar: https://github.com/tobi-wan-kenobi/bumblebee-status
+
 Lockscreen: https://github.com/pavanjadhaw/betterlockscreen
 
 To get powerline to work: https://wiki.archlinux.org/index.php/Powerline
