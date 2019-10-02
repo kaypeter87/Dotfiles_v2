@@ -130,7 +130,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # open applications on specific workspaces
 assign [class="Chromium"] $workspace1
 assign [class="Google-chrome"] $workspace1
-assign [class="Firefox"] $workspace1
+assign [class="firefoxdeveloperedition"] $workspace1
 assign [class="qutebrowser"] $workspace1
 assign [class="Nautilus"] $workspace3
 assign [class="Pcmanfm"] $workspace3
