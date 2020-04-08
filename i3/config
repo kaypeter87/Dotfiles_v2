@@ -37,10 +37,10 @@ bindsym $mod+d exec " dmenu_run -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#
 # installed.
 
 # start rofi (dmenu mode)
-bindsym $mod+z exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -lines 10 -eh 1 -width 50 -padding 50 -opacity "85" -font "Droid Sans 16"'
+bindsym $mod+z exec i3-dmenu-desktop --dmenu='rofi -dmenu -i -lines 20 -eh 1 -width 15 -padding 50 -opacity "75" -font "Droid Sans 16"'
 
 # start rofi (window mode)
-bindsym $mod+Tab exec rofi -show window -i -lines 10 -eh 1 -width 50 -padding 50 -opacity "85" -font "Droid Sans 16"
+bindsym $mod+Tab exec rofi -show window -i -lines 10 -eh 1 -width 15 -padding 50 -opacity "75" -font "Droid Sans 16"
 
 # change focus
 bindsym $mod+h focus left
