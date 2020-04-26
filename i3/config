@@ -242,7 +242,7 @@ bindsym Mod1+Shift+Print exec scrot -s $HOME/Bilder/Screenshots/`date +%Y-%m-%d_
 bar {
 	font pango:Droid Sans Mono for Powerline 11
         position top
-	status_command ~/git/bumblebee-status/bumblebee-status -m spotify dunst weather uptime disk:root nvidiagpu memory cpu kernel pasink datetime vpn pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
+	status_command ~/git/bumblebee-status/bumblebee-status -m spotify dunst weather uptime disk:root memory cpu kernel pasink datetime vpn pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
 	tray_output primary
 #	output HDMI-A-0
   	colors {
