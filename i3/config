@@ -274,9 +274,12 @@ bindsym $mod+Delete exec /usr/bin/rofi-computer
 bindsym $mod+shift+Delete exec betterlockscreen --lock dim
 
 # screensetup
-exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DVI-D-0 --mode 3440x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
+# For Radeon VII:
+exec_always --no-startup-id xrandr --output DisplayPort-0 --mode 3440x1440 --pos 3440x0 --rotate normal --output DisplayPort-1 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-2 --off --output HDMI-A-0 --off
 
-#exec_always --no-startup-id xrandr --output DVI-I-0 --off --output DVI-I-1 --off --output HDMI-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DP-0 --mode 3440x1440 --pos 3440x0 --rotate left --output DP-1 --off --output DVI-D-0 --off
+#exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DVI-D-0 --mode 3440x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
+
+#exec_always --no-startup-id xrandr --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-0 --mode 3440x1440 --pos 3440x0 --rotate normal --output DP-1 --off --output DVI-D-0 --off
 
 # autostarted applications
 exec --no-startup-id caffeine
