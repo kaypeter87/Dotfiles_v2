@@ -242,7 +242,7 @@ bindsym Mod1+Shift+Print exec scrot -s $HOME/Bilder/Screenshots/`date +%Y-%m-%d_
 bar {
 	font pango:Droid Sans Mono for Powerline 11
         position top
-	status_command ~/git/bumblebee-status/bumblebee-status -m spotify dunst weather uptime disk:root memory cpu kernel pasink datetime vpn pacman  -p root.path=/ time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
+	status_command ~/git/bumblebee-status/bumblebee-status -m spotify indicator dunst weather uptime network_traffic disk:nas disk:root memory cpu kernel pasink datetime vpn pacman -p root.path=/ nas.path=/mnt/meeseeks/backups time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
 	tray_output primary
 #	output HDMI-A-0
   	colors {
@@ -271,7 +271,7 @@ gaps outer 2
 
 # shut down, restart and locking features
 bindsym $mod+Delete exec /usr/bin/rofi-computer
-bindsym $mod+shift+Delete exec betterlockscreen --lock dim
+bindsym $mod+shift+Delete exec betterlockscreen --lock blur
 
 # screensetup
 # For Radeon VII:
@@ -290,5 +290,4 @@ exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 exec --no-startup-id xset dpms 1200
 exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
 exec --no-startup-id dunst
-exec --no-startup-id ~/.screenlayout/test.sh
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
