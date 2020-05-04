@@ -242,7 +242,7 @@ bindsym Mod1+Shift+Print exec scrot -s $HOME/Bilder/Screenshots/`date +%Y-%m-%d_
 bar {
 	font pango:Droid Sans Mono for Powerline 11
         position top
-	status_command ~/git/bumblebee-status/bumblebee-status -m spotify indicator dunst weather uptime network_traffic disk:nas disk:root memory cpu kernel pasink datetime vpn pacman -p root.path=/ nas.path=/mnt/meeseeks/backups time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
+	status_command ~/git/bumblebee-status/bumblebee-status -m spotify dunst weather uptime network_traffic disk:nas disk:root memory sensors kernel datetime vpn pacman -p root.path=/ nas.path=/mnt/meeseeks/backups time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
 	tray_output primary
 #	output HDMI-A-0
   	colors {
@@ -275,7 +275,7 @@ bindsym $mod+shift+Delete exec betterlockscreen --lock blur
 
 # screensetup
 # For Radeon VII:
-exec_always --no-startup-id xrandr --output DisplayPort-0 --mode 3440x1440 --pos 3440x0 --rotate normal --output DisplayPort-1 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-2 --off --output HDMI-A-0 --off
+exec_always --no-startup-id xrandr --output DisplayPort-0 --set TearFree on --mode 3440x1440 --pos 3440x0 --rotate normal --output DisplayPort-1 --set TearFree on --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-2 --off --output HDMI-A-0 --off
 
 #exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DVI-D-0 --mode 3440x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
 
