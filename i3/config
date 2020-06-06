@@ -93,15 +93,15 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1:Web "
-set $workspace2 "2:Terminal "
-set $workspace3 "3:File Manager "
-set $workspace4 "4:Music "
+set $workspace1 "1:Terminal "
+set $workspace2 "2:Web "
+set $workspace3 "3:Chat "
+set $workspace4 "4:Code "
 set $workspace5 "5:Video "
 set $workspace6 "6:Game "
 set $workspace7 "7:Email "
 set $workspace8 "8:Work "
-set $workspace9 "9:Code "
+set $workspace9 "9:File Manager "
 set $workspace10 "10:Spotify "
 
 # switch to workspace
@@ -129,9 +129,11 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # open applications on specific workspaces
-assign [class="Chromium"] $workspace1
-assign [class="Google-chrome"] $workspace1
-assign [class="firefoxdeveloperedition"] $workspace1
+assign [class="Chromium"] $workspace2
+assign [class="Google-chrome"] $workspace2
+assign [class="firefoxdeveloperedition"] $workspace2
+assign [class="firefox-firejail"] $workspace1
+assign [class="firefox"] $workspace2
 assign [class="qutebrowser"] $workspace1
 assign [class="Nautilus"] $workspace3
 assign [class="Pcmanfm"] $workspace3
@@ -148,6 +150,7 @@ assign [class="MPlayer"] $workspace5
 assign [class="mpv"] $workspace5
 assign [class="Steam"] $workspace6
 assign [class="Gimp"] $workspace8
+assign [class="Slack"] $workspace3
 #assign [class="Photoshop.exe"] $workspace8
 #assign [class="Gthumb"] $workspace8
 
@@ -223,15 +226,15 @@ for_window [class="minergate"] floating enable border normal
 for_window [class="Xarchiver"] floating enable
 
 # volume control
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # media player controls
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioPause exec mpc pause
-bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioPrev exec mpc prev
+#bindsym XF86AudioPlay exec mpc toggle
+#bindsym XF86AudioPause exec mpc pause
+#bindsym XF86AudioNext exec mpc next
+#bindsym XF86AudioPrev exec mpc prev
 
 # screenshot
 bindsym Print exec scrot $HOME/Bilder/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
@@ -271,23 +274,26 @@ gaps outer 2
 
 # shut down, restart and locking features
 bindsym $mod+Delete exec /usr/bin/rofi-computer
-bindsym $mod+shift+Delete exec betterlockscreen --lock blur
+bindsym $mod+shift+Delete exec betterlockscreen -l
 
 # screensetup
 # For Radeon VII:
-exec_always --no-startup-id xrandr --output DisplayPort-0 --set TearFree on --mode 3440x1440 --pos 3440x0 --rotate normal --output DisplayPort-1 --set TearFree on --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-2 --off --output HDMI-A-0 --off
 
-#exec_always --no-startup-id xrandr --output DisplayPort-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DVI-D-0 --mode 3440x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
+#exec_always --no-startup-id xrandr --output DisplayPort-0 --set TearFree on --mode 3440x1440 --pos 1440x0 --rotate inverted --output DisplayPort-1 --set TearFree on --primary --mode 3440x1440 --pos 1440x1440 --rotate normal --output DisplayPort-2 --off --output HDMI-A-0 --set TearFree on --mode 3440x1440 --pos 0x0 --rotate left
 
-#exec_always --no-startup-id xrandr --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x0 --rotate normal --output DisplayPort-0 --mode 3440x1440 --pos 3440x0 --rotate normal --output DP-1 --off --output DVI-D-0 --off
+#exec_always --no-startup-id xrandr --output DisplayPort-0 --off --output DisplayPort-1 --set TearFree on --primary --mode 3440x1440 --pos 1440x1440 --rotate normal --output DisplayPort-2 --off --output HDMI-A-0 --off
+
+
 
 # autostarted applications
-exec --no-startup-id caffeine
+
+exec --no-startup-id ~/.screenlayout/monitor-setup.sh
+exec --no-startup-id urxvtd -q
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec --no-startup-id nitrogen --restore; sleep 1;
-exec --no-startup-id compton --config ~/.config/i3/compton.conf -b
 exec --no-startup-id xset dpms 1200
-exec --no-startup-id xautolock -time 10 -locker "betterlockscreen -l"
+exec --no-startup-id xautolock -time 30 -locker "betterlockscreen -l"
 exec --no-startup-id dunst
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id "sh -c 'sleep 2; exec picom --experimental-backends -b'"
