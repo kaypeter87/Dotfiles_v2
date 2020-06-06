@@ -22,14 +22,14 @@ URxvt.loginShell:           true
 URxvt.saveLines:            1000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
-urxvt.background:           [80]#161821
+URxvt.background:           #2E3440
 
 ! Appearance
-URxvt.font:           xft:Terminus (TTF) for Powerline:MediumForPowerline:size=13:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.imFont:         xft:Terminus (TTF) for Powerline:MediumForPowerline:size=13:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.boldFont:       xft:Terminus (TTF) for Powerline:MediumForPowerline:size=13:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.italicFont:     xft:Terminus (TTF) for Powerline:MediumForPowerline:size=13:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.boldItalicFont: xft:Terminus (TTF) for Powerline:MediumForPowerline:size=13:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
+URxvt.font:           xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
+URxvt.imFont:         xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
+URxvt.boldFont:       xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
+URxvt.italicFont:     xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
+URxvt.boldItalicFont: xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
 
 ! Fix font space
 URxvt.letterSpace: 0
@@ -90,7 +90,3 @@ URxvt.pointerBlank:         true
 *.color13: nord15
 *.color14: nord7
 *.color15: nord6
-
-! ------------------------------------------------------------------------------
-! 2nd Terminal Settings... waiting
-! ------------------------------------------------------------------------------

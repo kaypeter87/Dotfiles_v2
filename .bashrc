@@ -10,10 +10,10 @@ alias grep='grep --color=auto'
 
 export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;12m\]@\[$(tput sgr0)\]\[\033[38;5;7m\]\h\[$(tput sgr0)\]\[\033[38;5;12m\]]\[$(tput sgr0)\]\[\033[38;5;15m\]: \[$(tput sgr0)\]\[\033[38;5;7m\]\w\[$(tput sgr0)\]\[\033[38;5;12m\]>\[$(tput sgr0)\]\[\033[38;5;10m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
-[ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
-[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
-[ -e "$DIR_COLORS" ] || DIR_COLORS=""
-eval "`dircolors -b $DIR_COLORS`"
+#[ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
+#[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
+#[ -e "$DIR_COLORS" ] || DIR_COLORS=""
+#eval "`dircolors -b $DIR_COLORS`"
 
 export PYTHONPATH=/usr/lib/python3.8/site-packages
 powerline-daemon -q
@@ -45,3 +45,4 @@ if [ -f $1 ] ; then
 neofetch
 
 export PATH="${PATH}:/home/peterk/.gem/ruby/2.6.0/bin"
+test -r "~/.dir_colors" && eval $(dircolors ~/.dircolors)
