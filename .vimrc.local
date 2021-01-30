@@ -17,10 +17,12 @@ if (term == "st-256color" || term == "tmux")
 " Auto open NERDTree and ctags when you enter Vim
   au VimEnter * NERDTree
   au VimEnter * nested :TagbarOpen
+  au VimEnter * wincmd l
   colorscheme nord
 else
   colorscheme nord
 endif
+
 
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1
