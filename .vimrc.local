@@ -8,18 +8,18 @@
 let term=$TERM
 
 " Set to Python2 Interpreter path
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " Set the background to dark
 set background=dark
 
-if term == "st-256color"
+if (term == "st-256color" || term == "tmux")
 " Auto open NERDTree and ctags when you enter Vim
   au VimEnter * NERDTree
   au VimEnter * nested :TagbarOpen
   colorscheme nord
 else
-  colorscheme iceberg
+  colorscheme nord
 endif
 
 " vim-airline configuration
@@ -49,3 +49,11 @@ set autoindent
 
 " highlight character pairs ie {}
 runtime macros/matchit.vim
+
+" Terraform configs
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
+
+" Set asm filetype to nasm syntax highlighting
+au BufRead,BufNewFile *.asm set filetype=nasm
