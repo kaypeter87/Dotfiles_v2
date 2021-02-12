@@ -25,11 +25,7 @@ URxvt.lineSpace:            0
 URxvt.background:           #2E3440
 
 ! Appearance
-URxvt.font:           xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.imFont:         xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.boldFont:       xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.italicFont:     xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
-URxvt.boldItalicFont: xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12:antialias=true,xft:Inconsolata\ For\ Powerline:size=13:antialias=true
+URxvt.font:           xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12,xft:SauceCodePro Nerd Font:Regular:size=12:antialias=true
 
 ! Fix font space
 URxvt.letterSpace: 0
