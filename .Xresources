@@ -12,41 +12,6 @@ rofi.color-normal: argb:00273238, #c1c1c1, argb:3a273238, #394249, #ffffff
 rofi.color-active: argb:00273238, #80cbc4, argb:3a273238, #394249, #80cbc4
 rofi.color-urgent: argb:00273238, #ff1844, argb:3a273238, #394249, #ff1844
 
-URxvt.depth:                32
-URxvt.geometry:             90x30
-URxvt.transparent:          false
-URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
-URxvt.loginShell:           true
-URxvt.saveLines:            10000
-URxvt.internalBorder:       3
-URxvt.lineSpace:            0
-URxvt.background:           #2E3440
-
-! Appearance
-URxvt.font:           xft:Terminus (TTF) for Powerline:MediumForPowerline:size=12,xft:SauceCodePro Nerd Font:Regular:size=12:antialias=true
-
-! Fix font space
-URxvt.letterSpace: 0
-
-! Scrollbar
-URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            false
-
-! Perl extensions
-URxvt.perl-ext-common:      default,matcher
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          qutebrowser
-
-! Cursor
-URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
-URxvt.cursorUnderline:      false
-
-! Pointer
-URxvt.pointerBlank:         true
-
 #define nord0 #2E3440
 #define nord1 #3B4252
 #define nord2 #434C5E
