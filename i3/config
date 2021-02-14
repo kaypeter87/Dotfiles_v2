@@ -23,8 +23,7 @@ font pango:Droid Sans 10, Font Awesome 5 Free 10
 floating_modifier Shift
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec st
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
