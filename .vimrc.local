@@ -29,6 +29,8 @@ else
   colorscheme nord
 endif
 
+" Hide hidden files
+let g:NERDTreeShowHidden=0
 
 " vim-airline configuration
 let g:airline#extensions#tabline#enabled = 1
