@@ -23,7 +23,7 @@ font pango:Droid Sans 10, Font Awesome 5 Free 10
 floating_modifier Shift
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty --single-instance
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -93,15 +93,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $workspace1 "1:Terminal "
-set $workspace2 "2:Web "
-set $workspace3 "3:Chat "
-set $workspace4 "4:Code "
-set $workspace5 "5:Video "
-set $workspace6 "6:Game "
-set $workspace7 "7:Email "
-set $workspace8 "8:Work "
-set $workspace9 "9:File Manager "
-set $workspace10 "10:Spotify "
+set $workspace2 "2:Web  "
+set $workspace3 "3:Chat  "
+set $workspace4 "4:Code  "
+set $workspace5 "5:Video  "
+set $workspace6 "6:Game  "
+set $workspace7 "7:Email  "
+set $workspace8 "8:Work  "
+set $workspace9 "9:File Manager  "
+set $workspace10 "10:Spotify  "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -245,8 +245,9 @@ bar {
 	font pango:Droid Sans Mono for Powerline 11
         position top
 	status_command ~/git/bumblebee-status/bumblebee-status -m spotify dunst weather uptime network_traffic disk:nas disk:root memory sensors kernel datetime vpn pacman -p root.path=/ nas.path=/mnt/meeseeks/backups time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
-	tray_output primary
-#	output HDMI-A-0
+	tray_output DisplayPort-0
+	output DisplayPort-0
+	output DisplayPort-1
   	colors {
 		background $bg-color
 	    	separator #002244
@@ -255,7 +256,20 @@ bar {
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
-
+}
+bar {
+	font pango:Droid Sans Mono for Powerline 11
+        position top
+  output DisplayPort-2
+	status_command ~/git/bumblebee-status/bumblebee-status -m weather uptime kernel datetime pacman -p time.format="%H:%M CW %V" date.format="%A, %d %b %Y" -t nord-powerline
+  	colors {
+		background $bg-color
+	    	separator #002244
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+	}
 }
 
 
