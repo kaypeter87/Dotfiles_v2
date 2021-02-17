@@ -15,7 +15,7 @@ export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\
 #[ -e "$DIR_COLORS" ] || DIR_COLORS=""
 #eval "`dircolors -b $DIR_COLORS`"
 
-export PYTHONPATH=/usr/lib/python3.8/site-packages
+export PYTHONPATH=/usr/lib/python3.9/site-packages
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
@@ -46,3 +46,12 @@ neofetch
 
 export PATH="${PATH}:/home/peterk/.gem/ruby/2.6.0/bin"
 test -r "~/.dir_colors" && eval $(dircolors ~/.dircolors)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export VAULT_ADDR='https://vault.local.theengineeringbay.com'
+export QT_QPA_PLATFORMTHEME=gtk2
+alias ssh="kitty +kitten ssh"
