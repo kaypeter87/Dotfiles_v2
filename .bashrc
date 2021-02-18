@@ -54,4 +54,4 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export VAULT_ADDR='https://vault.local.theengineeringbay.com'
 export QT_QPA_PLATFORMTHEME=gtk2
-alias ssh="kitty +kitten ssh"
+alias ssh='TERM=xterm-256color ssh'
