@@ -301,7 +301,6 @@ bindsym $mod+shift+Delete exec betterlockscreen -l
 # autostarted applications
 
 exec --no-startup-id ~/.screenlayout/monitor-setup.sh
-exec --no-startup-id urxvtd -q
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec --no-startup-id xset dpms 1200
@@ -309,4 +308,4 @@ exec --no-startup-id xautolock -time 30 -locker "betterlockscreen -l"
 exec --no-startup-id dunst
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "sh -c 'sleep 2; exec picom --experimental-backends -b'"
-#exec --no-startup-id nitrogen --restore --force-setter=xwindows
+exec --no-startup-id nitrogen --restore
